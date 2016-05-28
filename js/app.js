@@ -67,6 +67,8 @@ var refresh = function() {
 	});
 }
 
+refresh();
+
 setInterval(function() {
 	refresh();
 }, 1000 * 30);
