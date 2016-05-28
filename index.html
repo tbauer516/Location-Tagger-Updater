@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Tyler Bauer">
+    <meta name="description" content="Web Service To Refresh Firebase">
+    <title>Location Tagger Updater</title>
+
+
+    <!-- our CSS -->
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    
+</head>
+
+<body>
+
+    <div id = "current">
+
+    </div>
+
+    <div id ="main">
+
+    </div>
+
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDszQGDAZFrdn1AlfLbH-Ebo1ntHLV_3go",
+        authDomain: "fourth-splice-131619.firebaseapp.com",
+        databaseURL: "https://fourth-splice-131619.firebaseio.com",
+        storageBucket: "fourth-splice-131619.appspot.com",
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    
+    <!-- our Javascript -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
