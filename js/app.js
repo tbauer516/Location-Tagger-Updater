@@ -14,8 +14,6 @@ firebase.auth().onAuthStateChanged(function(user) {
     // User is signed in.
     var isAnonymous = user.isAnonymous;
     var uid = user.uid;
-
-    refresh();
     
   } else {
     
@@ -69,6 +67,17 @@ var refresh = function() {
 	});
 }
 
-setInterval(function() {
-	refresh();
-}, 1000 * 30);
+var refreshTimeout = function(timeout) {
+	setInterval(function() {
+		refresh();
+	}, 1000 * timeout);
+}
+
+var initialTimeout = function(timeout) {
+	setTimeout(function() {
+		refresh();
+	}, 1000 * timeout);
+}
+
+initialTimeout(5);
+refreshTimeout(30);
